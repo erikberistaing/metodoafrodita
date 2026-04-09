@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Afrodita | Reinas Magnéticas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,900&family=Plus+Jakarta+Sans:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-bright: #F9E498;
+            --dark: #050505;
+            --dark-card: #0D0D0D;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--dark);
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        .serif { font-family: 'Playfair Display', serif; }
+        
+        /* Efectos de Brillo Dorado */
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.05);
+        }
+        .gold-text-gradient {
+            background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 45%, #B38728 100%);
+        }
+
+        /* Botón Viral Shimmer */
+        .btn-viral {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 800;
+        }
+        .btn-viral::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        /* FAQ Estilo Minimalista */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .faq-item.active .faq-answer { max-height: 300px; padding-bottom: 20px; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); color: var(--gold); }
+
+        .glow-purple {
+            box-shadow: 0 0 80px rgba(126, 34, 206, 0.15);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ANUNCIO SUPERIOR -->
+    <div class="bg-gold-gradient text-black py-2 text-center text-[10px] font-bold tracking-[0.3em] uppercase">
+        Oferta exclusiva para mujeres decididas - Solo por hoy
+    </div>
+
+    <!-- HERO SECTION -->
+    <header class="relative pt-20 pb-32 px-6 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-30 pointer-events-none">
+            <div class="absolute top-[-10%] left-[20%] w-[60%] h-[40%] bg-purple-600 rounded-full blur-[150px]"></div>
+        </div>
+        
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <h2 class="text-gold-text-gradient text-sm md:text-base font-bold tracking-[0.5em] uppercase mb-8">
+                Desbloquea tu Poder Magnético
+            </h2>
+            <h1 class="serif text-5xl md:text-8xl font-black mb-8 leading-[1.1] tracking-tighter">
+                ¿Por qué algunas mujeres parecen <span class="italic font-light">magnetizar</span> el éxito?
+            </h1>
+            <p class="text-gray-400 text-lg md:text-2xl mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                Descubre el <span class="text-white font-semibold">Método Afrodita</span> y transforma tu presencia de invisible a una fuerza irresistible de la naturaleza.
+            </p>
+            
+            <div class="flex flex-col items-center gap-6">
+                <a href="#oferta" class="btn-viral bg-gold-gradient text-black py-6 px-12 rounded-full text-xl md:text-2xl hover:scale-105 shadow-[0_0_50px_rgba(212,175,55,0.3)]">
+                    Obtener mi acceso ahora
+                </a>
+                <div class="flex items-center gap-2 text-gray-500 text-sm uppercase tracking-widest">
+                    <span class="flex -space-x-2">
+                        <div class="w-6 h-6 rounded-full bg-gray-800 border border-dark"></div>
+                        <div class="w-6 h-6 rounded-full bg-gray-700 border border-dark"></div>
+                        <div class="w-6 h-6 rounded-full bg-gray-600 border border-dark"></div>
+                    </span>
+                    <span>+1,500 mujeres ya lo están aplicando</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN EBOOK PRINCIPAL -->
+    <section class="py-24 px-6 border-y border-white/5 bg-[#080808]">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-gold-gradient opacity-20 blur-2xl group-hover:opacity-30 transition duration-1000"></div>
+                    <div class="mockup-placeholder relative z-10 aspect-[3/4] rounded-3xl overflow-hidden border border-white/10 bg-dark">
+                        [Imagen Editorial del Ebook Método Afrodita]
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <h3 class="serif text-gold-text-gradient text-4xl md:text-6xl font-bold tracking-tighter uppercase">Método Afrodita</h3>
+                    <p class="text-xl text-gray-300 font-light leading-relaxed">
+                        Este no es un manual común. Es una reingeniería de tu energía. Hemos condensado los secretos de la fascinación en una hoja de ruta práctica y elegante.
+                    </p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4 text-gray-400">
+                            <span class="w-2 h-2 bg-gold rounded-full"></span>
+                            <span>Psicología conductual avanzada</span>
+                        </li>
+                        <li class="flex items-center gap-4 text-gray-400">
+                            <span class="w-2 h-2 bg-gold rounded-full"></span>
+                            <span>Dominio de la presencia escénica</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BONOS ESTILO PREMIUM CARDS -->
+    <section class="py-32 px-6 bg-dark">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-24">
+                <h2 class="serif text-5xl md:text-7xl font-bold mb-4 uppercase">Complementos de Élite</h2>
+                <p class="text-gold tracking-[0.3em] uppercase text-sm">Aceleradores de resultados incluidos</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Bono 1 -->
+                <div class="gold-border p-8 rounded-[2.5rem] bg-[#0D0D0D] hover:bg-[#111] transition-all">
+                    <div class="mockup-placeholder aspect-square mb-8 rounded-2xl">[Bono 1]</div>
+                    <span class="text-gold font-bold text-xs tracking-widest uppercase">Bono Exclusivo</span>
+                    <h4 class="text-2xl font-bold mt-2 mb-4">Ritual de 7 Días</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Reconexión diaria diseñada para despertar tu magnetismo interno.</p>
+                </div>
+                <!-- Bono 2 -->
+                <div class="gold-border p-8 rounded-[2.5rem] bg-[#0D0D0D] hover:bg-[#111] transition-all">
+                    <div class="mockup-placeholder aspect-square mb-8 rounded-2xl">[Bono 2]</div>
+                    <span class="text-gold font-bold text-xs tracking-widest uppercase">Bono Exclusivo</span>
+                    <h4 class="text-2xl font-bold mt-2 mb-4">Lenguaje Corporal</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Domina cualquier habitación sin necesidad de pronunciar palabra.</p>
+                </div>
+                <!-- Bono 3 -->
+                <div class="gold-border p-8 rounded-[2.5rem] bg-[#0D0D0D] hover:bg-[#111] transition-all">
+                    <div class="mockup-placeholder aspect-square mb-8 rounded-2xl">[Bono 3]</div>
+                    <span class="text-gold font-bold text-xs tracking-widest uppercase">Bono Exclusivo</span>
+                    <h4 class="text-2xl font-bold mt-2 mb-4">Preguntas de Atracción</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Gatillos mentales para crear conexiones profundas al instante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: TU PACK PREMIUM -->
+    <section class="py-32 px-6 relative bg-[#080808]">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="serif text-gold-text-gradient text-5xl md:text-7xl font-bold mb-6 uppercase italic">Tu Pack Premium</h2>
+                <div class="h-[1px] w-full bg-gradient-to-r from-transparent via-gold/30 to-transparent mb-12"></div>
+            </div>
+
+            <div class="space-y-4 mb-20">
+                <div class="flex justify-between items-center p-6 border-b border-white/5 hover:bg-white/5 transition rounded-xl">
+                    <span class="text-xl font-light tracking-tight text-gray-300 uppercase">Método Afrodita (Ebook)</span>
+                    <span class="text-gold font-bold">$37 USD</span>
+                </div>
+                <div class="flex justify-between items-center p-6 border-b border-white/5 hover:bg-white/5 transition rounded-xl">
+                    <span class="text-xl font-light tracking-tight text-gray-300 uppercase">Ritual de 7 Días</span>
+                    <span class="text-gold font-bold">$20 USD</span>
+                </div>
+                <div class="flex justify-between items-center p-6 border-b border-white/5 hover:bg-white/5 transition rounded-xl">
+                    <span class="text-xl font-light tracking-tight text-gray-300 uppercase">Lenguaje Corporal Magnético</span>
+                    <span class="text-gold font-bold">$25 USD</span>
+                </div>
+                <div class="flex justify-between items-center p-6 border-b border-white/5 hover:bg-white/5 transition rounded-xl">
+                    <span class="text-xl font-light tracking-tight text-gray-300 uppercase">Preguntas de Atracción</span>
+                    <span class="text-gold font-bold">$15 USD</span>
+                </div>
+            </div>
+
+            <!-- NUEVA SECCIÓN: PARA TI SI... -->
+            <div class="gold-border p-12 rounded-[3rem] bg-dark-card relative overflow-hidden glow-purple mb-20">
+                <h3 class="serif text-3xl md:text-5xl font-bold mb-10 text-center uppercase">Este método es para ti si...</h3>
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 w-5 h-5 bg-gold-gradient rounded-full flex-shrink-0"></div>
+                        <p class="text-gray-400">Te sientes invisible en entornos sociales.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 w-5 h-5 bg-gold-gradient rounded-full flex-shrink-0"></div>
+                        <p class="text-gray-400">Buscas atraer sin tener que perseguir.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 w-5 h-5 bg-gold-gradient rounded-full flex-shrink-0"></div>
+                        <p class="text-gray-400">Quieres una confianza inquebrantable.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 w-5 h-5 bg-gold-gradient rounded-full flex-shrink-0"></div>
+                        <p class="text-gray-400">Deseas mejorar tu comunicación no verbal.</p>
+                    </div>
+                </div>
+
+                <!-- IMAGEN DEL PACK COMPLETO -->
+                <div class="mockup-placeholder w-full aspect-video border-gold/20 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700">
+                    [Imagen Profesional del Pack: Dispositivos + Guías + Bonos]
+                </div>
+            </div>
+
+            <!-- BOX DE PRECIO FINAL -->
+            <div id="oferta" class="text-center p-12 bg-gold-gradient rounded-[3rem] text-black">
+                <p class="font-bold text-xs tracking-[0.4em] uppercase mb-4 opacity-70">Valor Total: $97 USD</p>
+                <h2 class="serif text-2xl font-bold mb-4">Llévatelo hoy por solo</h2>
+                <div class="flex justify-center items-baseline gap-2 mb-8">
+                    <span class="text-2xl">$</span>
+                    <span class="text-8xl md:text-9xl font-black tracking-tighter">12</span>
+                    <span class="text-xl font-bold uppercase">USD</span>
+                </div>
+                <button class="bg-black text-white w-full py-6 rounded-full text-2xl font-black uppercase tracking-widest hover:scale-105 transition btn-viral" onclick="showPurchaseModal()">
+                    ¡Acceso Inmediato!
+                </button>
+                <p class="mt-6 text-[10px] font-bold uppercase tracking-widest opacity-60">Pago único • Sin suscripciones • Acceso de por vida</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS ESTILO CAROUSEL -->
+    <section class="py-32 px-6 bg-dark">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-10 border border-white/5 rounded-[2rem] bg-dark-card italic text-gray-400">
+                    <p class="mb-6">"Mi presencia cambió totalmente. Siento que ahora el mundo me mira de forma diferente."</p>
+                    <span class="text-white font-bold not-italic text-sm">— Elena G.</span>
+                </div>
+                <div class="p-10 border border-white/5 rounded-[2rem] bg-dark-card italic text-gray-400">
+                    <p class="mb-6">"El lenguaje corporal fue la pieza que me faltaba. Imprescindible para cualquier mujer."</p>
+                    <span class="text-white font-bold not-italic text-sm">— María S.</span>
+                </div>
+                <div class="p-10 border border-white/5 rounded-[2rem] bg-dark-card italic text-gray-400">
+                    <p class="mb-6">"El ritual de 7 días es oro puro. Me devolvió la confianza que había perdido."</p>
+                    <span class="text-white font-bold not-italic text-sm">— Karla F.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-32 px-6 bg-[#080808]">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="serif text-4xl md:text-6xl text-center mb-20 uppercase font-black">Dudas Comunes</h2>
+            <div class="space-y-4">
+                <div class="faq-item group cursor-pointer border-b border-white/10" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center py-8">
+                        <h4 class="text-lg md:text-xl font-bold uppercase tracking-tight group-hover:text-gold transition">¿Cómo recibo el acceso?</h4>
+                        <span class="faq-icon text-gray-600 transition-transform">▼</span>
+                    </div>
+                    <div class="faq-answer text-gray-500 font-light leading-relaxed">
+                        Inmediatamente después del pago, recibirás un correo electrónico con los enlaces de descarga para el Método Afrodita y todos sus bonos. Sin esperas.
+                    </div>
+                </div>
+                <!-- Otras 6 preguntas (resumidas para brevedad del código) -->
+                <div class="faq-item group cursor-pointer border-b border-white/10" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center py-8">
+                        <h4 class="text-lg md:text-xl font-bold uppercase tracking-tight group-hover:text-gold transition">¿Es una compra segura?</h4>
+                        <span class="faq-icon text-gray-600 transition-transform">▼</span>
+                    </div>
+                    <div class="faq-answer text-gray-500 font-light">Procesamos pagos con encriptación SSL de nivel bancario. Tu privacidad es nuestra prioridad.</div>
+                </div>
+                <div class="faq-item group cursor-pointer border-b border-white/10" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center py-8">
+                        <h4 class="text-lg md:text-xl font-bold uppercase tracking-tight group-hover:text-gold transition">¿Qué pasa si soy muy tímida?</h4>
+                        <span class="faq-icon text-gray-600 transition-transform">▼</span>
+                    </div>
+                    <div class="faq-answer text-gray-500 font-light">Este método está diseñado para que tu magnetismo trabaje por ti, eliminando la presión de tener que actuar de forma extrovertida forzada.</div>
+                </div>
+                <!-- ... repetir estructura para las 7 preguntas ... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-20 px-6 border-t border-white/5 text-center">
+        <h2 class="serif text-gold-text-gradient text-4xl font-black mb-8 italic">Afrodita</h2>
+        <p class="text-gray-600 text-[10px] tracking-[0.5em] uppercase">&copy; 2024 Reinas Magnéticas - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        function toggleFaq(element) {
+            const isActive = element.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+            if (!isActive) element.classList.add('active');
+        }
+
+        function showPurchaseModal() {
+            const confirmPurchase = confirm("Estás siendo redirigida a nuestra pasarela de pago segura de Reinas Magnéticas. ¿Deseas continuar con tu pedido de $12 USD?");
+            if (confirmPurchase) console.log("Redirigiendo...");
+        }
+    </script>
+</body>
+</html>
